@@ -1,5 +1,6 @@
 package com.barberia.taller1_poo;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
@@ -17,16 +18,7 @@ public class Cita {
         this.nombre = nombre;
         this.edad = edad;
         this.fecha = fecha;
-        this.hora = convertirHora(hora);
-    }
-
-    private String convertirHora(String hora) {
-        try {
-            LocalTime hora_am = LocalTime.parse(hora, DateTimeFormatter.ofPattern("HH:mm"));
-            return hora_am.format(DateTimeFormatter.ofPattern("hh:mm a"));
-        } catch (Exception e) {
-            return hora;
-        }
+        this.hora = hora;
     }
 
     // Getters y Setters
@@ -40,8 +32,6 @@ public class Cita {
     public void setEdad(int edad) { this.edad = edad; }
 
     public String getFecha() { return fecha; }
-    public void setFecha(String fecha) { this.fecha = fecha; }
 
     public String getHora() { return hora; }
-    public void setHora(String hora) { this.hora = hora; }
 }

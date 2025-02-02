@@ -79,12 +79,12 @@ public class ControladorRepoCitas {
 
     public static boolean esCitaRepetida(List<Cita> citas, Cita cita_ingresada) {
         LocalDate fecha_in = LocalDate.parse(cita_ingresada.getFecha(), DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-        LocalTime hora_in = LocalTime.parse(cita_ingresada.getHora(), DateTimeFormatter.ofPattern("hh:mm a"));
+        LocalTime hora_in = LocalTime.parse(cita_ingresada.getHora(), DateTimeFormatter.ofPattern("HH:mm"));
         LocalDateTime fecha_hora_in = LocalDateTime.of(fecha_in, hora_in);
 
         for (Cita cita : citas) {
             LocalDate fecha = LocalDate.parse(cita.getFecha(), DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-            LocalTime hora = LocalTime.parse(cita.getHora(), DateTimeFormatter.ofPattern("hh:mm a"));
+            LocalTime hora = LocalTime.parse(cita.getHora(), DateTimeFormatter.ofPattern("HH:mm"));
             LocalDateTime fecha_hora = LocalDateTime.of(fecha, hora);
 
             long dif_min = Math.abs(ChronoUnit.MINUTES.between(fecha_hora,fecha_hora_in));
