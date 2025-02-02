@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.entradas {
+    font-family: Arial, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+
+.anuncios {
+    padding: 50px 0px;
+    font-family: "Courier New";
+    font-size: xx-large;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.opciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.opciones button {
+    margin: 0 50px;
+    padding: 20px 30px;
+    background-color: #007bff;
+    font-size: x-large;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.opciones button:hover {
+    background-color: #0056b3;
+}
+
+.form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.form-group label {
+    margin-right: 10px;
+    width: 100px;
+    text-align: left;
+}
+.form-group input {
+    flex: 0.5;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.form-group select {
+    flex: 0.5;
+    padding: 11px;
+    box-sizing: border-box;
+}
+
+.fecha-hora {
+    justify-content: space-between;
+}
+
+.alerta {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.alerta {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.rechazo {
+    background-color: palevioletred;
+    color: darkred;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
