@@ -21,9 +21,20 @@
     </div>
 
 </form>
-<div th:if="${advertencia}" th:text="${advertencia}" class="rechazo"></div>
-
     <!-- Tabla -->
-
+<div th:if="${not#lists.isEmpty(citas_disp)}">
+    <table class="tabla">
+        <tr>
+            <th>Cédula</th>
+            <th>Nombres</th>
+            <th>Hora</th>
+        </tr>
+        <tr th:each="cita_disp : ${citas_disp}">
+            <td th:text="${cita_disp.cedula}"></td>
+            <td th:text="${cita_disp.nombre}"></td>
+            <td th:text="${cita_disp.hora}"></td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>

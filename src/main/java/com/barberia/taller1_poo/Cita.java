@@ -1,5 +1,8 @@
 package com.barberia.taller1_poo;
 
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
 public class Cita {
     private String cedula;
     private String nombre;
@@ -14,7 +17,16 @@ public class Cita {
         this.nombre = nombre;
         this.edad = edad;
         this.fecha = fecha;
-        this.hora = hora;
+        this.hora = convertirHora(hora);
+    }
+
+    private String convertirHora(String hora) {
+        try {
+            LocalTime hora_am = LocalTime.parse(hora, DateTimeFormatter.ofPattern("HH:mm"));
+            return hora_am.format(DateTimeFormatter.ofPattern("hh:mm a"));
+        } catch (Exception e) {
+            return hora;
+        }
     }
 
     // Getters y Setters

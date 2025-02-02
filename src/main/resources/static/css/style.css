@@ -97,3 +97,26 @@ body {
     font-weight: bold;
 }
 
+table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    border: 1px #7a9a2d;
+    font-size: medium;
+}
+
+th, td {
+    border: 1px solid #6ec310;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #8eb456;
+    color: white;
+}
+
+tr:nth-child(odd) {
+    background-color: #b9b9b9;
+}
