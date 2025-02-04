@@ -1,8 +1,5 @@
 package com.barberia.taller1_poo;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 
 public class Cita {
     private String cedula;
@@ -32,6 +29,9 @@ public class Cita {
     public void setEdad(int edad) { this.edad = edad; }
 
     public String getFecha() { return fecha; }
+    public void setFecha(String fecha) { this.fecha = fecha; }
 
     public String getHora() { return hora; }
+    public void setHora(String hora) { this.hora = hora; }
+
 }

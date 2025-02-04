@@ -53,6 +53,7 @@ public class ControladorCitas {
 
     @PostMapping({"/procesar-formulario"})
     public String procesarFormulario(@ModelAttribute Cita cita, Model model) {
+        generarFechas(model);
         // Prueba
         System.out.println("Cédula: " + cita.getCedula());
         System.out.println("Nombre: " + cita.getNombre());
@@ -66,8 +67,6 @@ public class ControladorCitas {
         } else {
             model.addAttribute("advertencia", "Ya existe una cita en esa fecha y hora");
         }
-
-        generarFechas(model);
 
         // Enviar un nuevo objeto vacío para limpiar el formulario
         model.addAttribute("cita", new Cita());
